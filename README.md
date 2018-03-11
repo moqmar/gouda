@@ -3,6 +3,9 @@ The no-worries documentation tool
 
 Gouda (short for **GO** **U**nified **D**ocumentation **A**ggregator) is a static documentation generator that takes simple Markdown files and creates a nice looking static webpage from it.
 
+## Download
+Give us a sec, we just started out. Give us a star and put the repo on your watch list to be the first to download gouda once we're ready. 
+
 ## Planned features
 - Host your own website (free)
 - Hosted plan (`<project>.gouda.io`)
