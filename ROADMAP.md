@@ -1,7 +1,7 @@
 # Roadmap
 ## 0.1
-:white_circle:      Command line interface wrapper  
-:white_circle:      Configuration parser  
+:large_blue_circle: Command line interface wrapper  
+:large_blue_circle: Configuration parser  
 :white_circle:      Plugin/Step system  
 :white_circle:      Markdown parsing and document generation  
 :white_circle:      Template conversion (Gouda will use [Mintlook](https://github.com/moqmar/mintlook-couscous))  

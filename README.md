@@ -2,7 +2,7 @@
 > The no-worries documentation tool
 ---
 
-Gouda (short for **Go** **U**nified **D**ocumentation **A**ggregator) is a static documentation generator using Markdown, is extendable using plugins and can even import existing documentation from JSDoc, GoDoc and more in a great template.  
+Gouda (short for **Go** **U**nified **D**ocumentation **A**ggregator) is a static documentation generator that's using Markdown, is extendable using plugins and can even import existing documentation from JSDoc, GoDoc and more, and give it an uniform look.  
 Besides the static generation, there will be a dynamic mode with a feature set similar to a lot of wiki software, which will also be available on a hosted plan.
 
 ## Download
@@ -16,6 +16,7 @@ Binaries and documentation on installation and usage will be available with vers
 - **Fully automated index and sitemap generation**, with pagination ("next"/"previous" page) for book-style documentation
 - **Versioning** (using git commits/tags)
 - **PDF, ePub and MHTML generation**
+- **Deployment to GitHub Pages, Surge, SSH, SFTP, rsync, FTP and many more**
 - **Custom CSS and templates**
 - Lots of awesome Markdown plugins that make the creation of beautiful documentation a breeze
   - **Interactive REST toolbox** - prepare request templates, and let users modify and send them. Will also support various methods for authentication and shared fields.
@@ -38,7 +39,7 @@ Binaries and documentation on installation and usage will be available with vers
 + README.md
 ```
 
-<details><summary>➜ view an example `gouda.yml`</summary>
+<details><summary>example 'gouda.yml'</summary>
 
 ```yaml
 
@@ -89,7 +90,6 @@ deploy:
 ## The application
 ### Static mode
 ```
-
 $ gouda build
 $ gouda serve
 $ gouda deploy [target=*]
