@@ -1,28 +1,32 @@
 # Gouda.io
-The no-worries documentation tool
+> The no-worries documentation tool
+---
 
-Gouda (short for **GO** **U**nified **D**ocumentation **A**ggregator) is a static documentation generator that takes simple Markdown files and creates a nice looking static webpage from it.
+Gouda (short for **Go** **U**nified **D**ocumentation **A**ggregator) is a static documentation generator using Markdown, is extendable using plugins and can even import existing documentation from JSDoc, GoDoc and more in a great template.  
+Besides the static generation, there will be a dynamic mode with a feature set similar to a lot of wiki software, which will also be available on a hosted plan.
 
 ## Download
-Give us a sec, we just started out. Give us a star and put the repo on your watch list to be the first to download gouda once we're ready. 
+Wait a moment, we just started out. Give us a star and put the repo on your watch list to be the first to use gouda once we're ready!  
+Binaries and documentation on installation and usage will be available with version 0.1. You can see on the [roadmap](ROADMAP.md) how far we already are.
 
 ## Planned features
-- Host your own website (free)
-- Hosted plan (`<project>.gouda.io`)
-    - 2€ per month and project (any team size)
-    - 3€ with own domain/deployment location
-- Online WYSIWYG editor (with git integration)
-- custom CSS, but no custom templates (→ consistency)
-- search
-    - dynamic index
-    - static index
-- multi language
-- versioning (git)
-- GitHub integration (links to issues)
+- **Online WYSIWYG editor** (with git integration)
+- **Fast and advanced search**; lightweight search for statically generated documentation
+- **Multi-Language**
+- **Fully automated index and sitemap generation**, with pagination ("next"/"previous" page) for book-style documentation
+- **Versioning** (using git commits/tags)
+- **PDF, ePub and MHTML generation**
+- **Custom CSS and templates**
+- Lots of awesome Markdown plugins that make the creation of beautiful documentation a breeze
+  - **Interactive REST toolbox** - prepare request templates, and let users modify and send them. Will also support various methods for authentication and shared fields.
+  - **LaTeX Math**
+  - **Graphing/Flow Charts/Sequence Diagrams/...** (with a graphical editor in the WYSIWYG editor)
+  - **Links to GitHub**, GitLab, Gogs, or Taiga artifacts (autocompletion in editor)
+  - **Hashtags** (autocompletion in editor)
+  - **Global bibliography** with citation/references (autocompletion in editor)
 
 ## Typical repository structure
 ```
-
 + docs/
   + examples.md
   + developers/
@@ -34,10 +38,11 @@ Give us a sec, we just started out. Give us a star and put the repo on your watc
 + README.md
 ```
 
-### gouda.yml
+<details><summary>➜ view an example `gouda.yml`</summary>
+
 ```yaml
 
-title: ...
+title: My awesome program
 
 target: ./html
 
@@ -45,6 +50,10 @@ links:
   "/developers/go":
     godoc: ../src
   "/": ../README.md
+
+exclude:
+  - /excluded-folder/
+  - /you-can-use-gitignore-syntax.txt
 
 before:
   - echo "Generating documentation..."
@@ -75,6 +84,7 @@ deploy:
   surgeDeploy:
     surge: docs.example.org
 ```
+</details>
 
 ## The application
 ### Static mode
@@ -82,12 +92,30 @@ deploy:
 
 $ gouda build
 $ gouda serve
-$ gouda deploy [target]
+$ gouda deploy [target=*]
 $ gouda edit # Start dynamic mode without authentication
 ```
 
-## Dynamic/Server mode
+### Dynamic/Server mode
 ```
-$ gouda-dynamic [host] [port]
+$ gouda dynamic [host=::] [port=8080]
 $ docker run --name gouda -v "$PWD":/data -p 8080:80 gouda/dynamic
 ```
+
+## License
+
+    Gouda - the no-worries documentation tool
+    Copyright (C) 2018  Moritz Marquardt & Frederik Kammel
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
