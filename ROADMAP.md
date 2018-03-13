@@ -4,7 +4,7 @@
 :white_circle:      Configuration parser  
 :white_circle:      Plugin/Step system  
 :white_circle:      Markdown parsing and document generation  
-:white_circle:      Template conversion (Gouda will use [Mintlook](https://github.com/moqmar/mintlook-couscous))
+:white_circle:      Template conversion (Gouda will use [Mintlook](https://github.com/moqmar/mintlook-couscous))  
 :white_circle:      Documentation, testing & CI  
 ## 0.5
 :white_circle:      Search  
