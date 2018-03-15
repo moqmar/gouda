@@ -1,5 +1,8 @@
 # Gouda.io
 > The no-worries documentation tool
+
+![](https://static.mo-mar.de/gouda.png)
+
 ---
 
 Gouda (short for **Go** **U**nified **D**ocumentation **A**ggregator) is a static documentation generator that's using Markdown, is extendable using plugins and can even import existing documentation from JSDoc, GoDoc and more, and give it an uniform look.  

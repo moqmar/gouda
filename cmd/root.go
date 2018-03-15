@@ -14,10 +14,11 @@ import (
 
 var log = logging.MustGetLogger("gouda")
 
+// TODO: Custom, more colorful help template
 var rootCmd = &cobra.Command{
 	Use:   "gouda",
 	Short: gouda.Bold + gouda.Yellow + "The no-worries documentation tool" + gouda.Reset,
-	Long:  gouda.Bold + gouda.Yellow + gouda.Cheese + "Gouda is a static documentation generator that's using Markdown and can import existing documentation from JSDoc, GoDoc and more, giving it an uniform look." + gouda.Reset,
+	Long:  gouda.Cheese,
 	Run: func(cmd *cobra.Command, args []string) {
 		cmd.Help()
 	},
