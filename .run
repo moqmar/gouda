@@ -1,0 +1,5 @@
+build: go build -o gouda-cli
+build-docs: ./gouda-cli --config docs/gouda.yaml --debug build
+run:
+- run build
+- run build-docs

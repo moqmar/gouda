@@ -1,0 +1,75 @@
+hash: f5088f5b9e70d780cbe81c5ac65a18caf1dfaf27a1163462a63f14de2cbb898a
+updated: 2018-06-08T12:24:20.61146689+02:00
+imports:
+- name: github.com/coreos/go-semver
+  version: 8ab6407b697782a06568d4b7f1db25550ec2e4c6
+  subpackages:
+  - semver
+- name: github.com/fsnotify/fsnotify
+  version: c2828203cd70a50dcccfb2761f8b1f8ceef9a8e9
+- name: github.com/hashicorp/hcl
+  version: ef8a98b0bbce4a65b5aa4c368430a80ddc533168
+  subpackages:
+  - hcl/ast
+  - hcl/parser
+  - hcl/printer
+  - hcl/scanner
+  - hcl/strconv
+  - hcl/token
+  - json/parser
+  - json/scanner
+  - json/token
+- name: github.com/inconshreveable/mousetrap
+  version: 76626ae9c91c4f2a10f34cad8ce83ea42c93bb75
+- name: github.com/magiconair/properties
+  version: c2353362d570a7bfa228149c62842019201cfb71
+- name: github.com/microcosm-cc/bluemonday
+  version: 995366fdf961d03629cd17361bddd32745718e2c
+- name: github.com/mitchellh/mapstructure
+  version: bb74f1db0675b241733089d5a1faa5dd8b0ef57b
+- name: github.com/moqmar/go-gitignore
+  version: a9519b2fdaea77001a426405d3a89ddbbe521e21
+- name: github.com/moqmar/gouda
+  version: 2bebf8de59ce0488cc5d93ada4e35fdd24644cb0
+  subpackages:
+  - cmd
+  - gouda
+- name: github.com/op/go-logging
+  version: b2cb9fa56473e98db8caba80237377e83fe44db5
+- name: github.com/pelletier/go-toml
+  version: c01d1270ff3e442a8a57cddc1c92dc1138598194
+- name: github.com/russross/blackfriday
+  version: 670777b536d38a1aef1d517f6330a77d52ceb02e
+- name: github.com/shurcooL/sanitized_anchor_name
+  version: 86672fcb3f950f35f2e675df2240550f2a50762f
+- name: github.com/spf13/afero
+  version: 787d034dfe70e44075ccc060d346146ef53270ad
+  subpackages:
+  - mem
+- name: github.com/spf13/cast
+  version: 8965335b8c7107321228e3e3702cab9832751bac
+- name: github.com/spf13/cobra
+  version: ef82de70bb3f60c65fb8eebacbb2d122ef517385
+- name: github.com/spf13/jwalterweatherman
+  version: 7c0cea34c8ece3fbeb2b27ab9b59511d360fb394
+- name: github.com/spf13/pflag
+  version: 3ebe029320b2676d667ae88da602a5f854788a8a
+- name: github.com/spf13/viper
+  version: b5e8006cbee93ec955a89ab31e0e3ce3204f3736
+- name: golang.org/x/net
+  version: 1e491301e022f8f977054da4c2d852decd59571f
+  subpackages:
+  - html
+  - html/atom
+- name: golang.org/x/sys
+  version: 9527bec2660bd847c050fda93a0f0c6dee0800bb
+  subpackages:
+  - unix
+- name: golang.org/x/text
+  version: 5c1cf69b5978e5a34c5f9ba09a83e56acc4b7877
+  subpackages:
+  - transform
+  - unicode/norm
+- name: gopkg.in/yaml.v2
+  version: 5420a8b6744d3b0345ab293f6fcba19c978f1183
+testImports: []

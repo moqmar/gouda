@@ -1,0 +1,16 @@
+package: .
+import:
+- package: github.com/coreos/go-semver
+  version: ^0.2.0
+  subpackages:
+  - semver
+- package: github.com/microcosm-cc/bluemonday
+- package: github.com/moqmar/go-gitignore
+- package: github.com/op/go-logging
+  version: ^1.0.0
+- package: github.com/russross/blackfriday
+  version: ^2.0.0
+- package: github.com/spf13/cobra
+  version: ^0.0.3
+- package: github.com/spf13/viper
+  version: ^1.0.2

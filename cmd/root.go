@@ -3,6 +3,7 @@ package cmd
 import (
 	"os"
 	"path"
+	"path/filepath"
 	"strings"
 
 	"github.com/op/go-logging"
@@ -12,7 +13,7 @@ import (
 	"github.com/moqmar/gouda/gouda"
 )
 
-var log = logging.MustGetLogger("gouda")
+var cliLogger = logging.MustGetLogger("cli")
 
 // TODO: Custom, more colorful help template
 var rootCmd = &cobra.Command{
@@ -27,7 +28,7 @@ var rootCmd = &cobra.Command{
 // Execute starts the program
 func Execute() {
 	if err := rootCmd.Execute(); err != nil {
-		log.Critical(err.Error())
+		cliLogger.Critical(err.Error())
 		os.Exit(1)
 	}
 }
@@ -46,7 +47,9 @@ func init() {
 
 func initConfig() {
 	if debug {
-		gouda.SetLogLevel(logging.DEBUG)
+		logging.SetLevel(logging.DEBUG, "")
+	} else {
+		logging.SetLevel(logging.INFO, "")
 	}
 
 	if cfgFile != "" {
@@ -71,9 +74,13 @@ func initConfig() {
 	}
 
 	if err := viper.ReadInConfig(); err != nil {
-		log.Info("Couldn't find a configuration file, using the current directory with the default config.")
+		cliLogger.Info("Couldn't find a configuration file, using the current directory with the default config.")
 	} else {
-		os.Chdir(path.Dir(viper.ConfigFileUsed()))
+		cliLogger.Noticef("Using the following configuration file: %s", viper.ConfigFileUsed())
+		root, err := filepath.Abs(path.Dir(viper.ConfigFileUsed()))
+		gouda.AssertNil(err)
+		gouda.Root = root
+		os.Chdir(gouda.Root)
 	}
 
 }

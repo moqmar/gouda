@@ -11,6 +11,9 @@ const (
 	Reset  = "\033[0m"
 )
 
+// FIXME: don't require Unicode (use pure ASCII art instead)
+// FIXME: use platform-independent colors
+
 var Cheese = strings.Replace(`\033[1;33m
     ▁▁   ▁▁▁▁
    ╱╲ ╰─╯    ╲     gouda 0.1

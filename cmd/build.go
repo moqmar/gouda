@@ -1,10 +1,11 @@
 package cmd
 
 import (
-	"time"
-
 	"github.com/moqmar/gouda/gouda"
 	"github.com/spf13/cobra"
+
+	// Register default pipeline + plugins
+	_ "github.com/moqmar/gouda/pipeline"
 )
 
 func init() {
@@ -16,10 +17,8 @@ var buildCmd = &cobra.Command{
 	Short: "Generate the documentation HTML files",
 	//Long:  ``,
 	Run: func(cmd *cobra.Command, args []string) {
-		print(gouda.Yellow + gouda.Bold + "➜ Building documentation…    ")
-		for true {
-			gouda.Progress()
-			time.Sleep(100 * time.Millisecond)
-		}
+		print(gouda.Yellow + gouda.Bold + "➜ Building documentation...\n" + gouda.Reset)
+		// TODO: improve CLI - progress, spinner, colors
+		gouda.RunPipeline(false)
 	},
 }

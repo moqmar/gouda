@@ -1,4 +1,4 @@
-package gouda
+package logging
 
 import (
 	"os"
@@ -20,7 +20,6 @@ func init() {
 	format := logging.MustStringFormatter(`%{color}%{time:15:04:05.000} %{module}/%{level:.4s} %{color:reset} %{message}`)
 	formatter := logging.NewBackendFormatter(backend, format)
 	leveled = logging.AddModuleLevel(formatter)
-	leveled.SetLevel(logging.NOTICE, "")
 
 	logging.SetBackend(leveled)
 
