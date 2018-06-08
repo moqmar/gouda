@@ -16,9 +16,7 @@ type outputPlugin struct{}
 var outputLogger = logging.MustGetLogger("output")
 
 // Init is called once on every build.
-func (p *outputPlugin) Init(step gouda.Step) {
-	viper.SetDefault("output", "./gouda-output")
-}
+func (p *outputPlugin) Init(step gouda.Step) {}
 
 // Each is called for every file that is processed in a build.
 func (p *outputPlugin) Each(step gouda.Step, file *gouda.File) {
