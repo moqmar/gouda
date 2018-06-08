@@ -15,6 +15,7 @@
 :white_circle:      Preview web server  
 :white_circle:      Live reload  
 ## 0.9
+:white_circle:      jsdoc/esdoc/javadocs/godoc/apiblueprint integration  
 :white_circle:      LaTeX math  
 :white_circle:      Interactive REST toolbox  
 :white_circle:      Graphing  
